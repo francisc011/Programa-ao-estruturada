@@ -1,8 +1,8 @@
-package csn;
+package conversoes;
 
 import java.util.Scanner;
 
-public class csn {
+public class conversoes {
 	
 	private static final String ClearScreen = null;
 	private static int decimal2;
@@ -11,71 +11,71 @@ public class csn {
 		Scanner dados = new Scanner (System.in);
 		int menu;
 		do {
-		System.out.print("..:Converter entre Sistemas NumÈricos:..\n"
-				+ "\n    (1) Bin·rio para Decimal \n"
+		System.out.print("..:Converter entre Sistemas Num√©ricos:..\n"
+				+ "\n    (1) Bin√°rio para Decimal \n"
 				+ "    (2) Octal para Decimal \n"
 				+ "    (3) Hexadecimal para Decimal \n"
-				+ "    (4) Decimal para Bin·rio \n"
+				+ "    (4) Decimal para Bin√°rio \n"
 				+ "    (5) Decimal para Octal \n"
 				+ "    (6) Decimal pra Hexadecimal \n"
 				+ "    (0) Sair do programa\n "
-				+ "\n Insira a opÁ„o que deseja: ");
+				+ "\n Insira a op√ß√£o que deseja: ");
 		menu = dados.nextInt();
 		switch (menu) {
 			case 1:
 				for (int i = 0; i < 100; ++i)  
 				       System.out.println();
 					long num;
-				System.out.print("\n Insira o n∫ Bin·rio: ");
+				System.out.print("\n Insira o n¬∫ Bin√°rio: ");
 					num = dados.nextInt();
 			    	int decimal = cbtd(num);
-		        System.out.println(" O n∫ Decimal correspondente È: " + decimal + "\n");
+		        System.out.println(" O n¬∫ Decimal correspondente √©: " + decimal + "\n");
 			break;
 			case 2:
 				for (int i = 0; i < 100; ++i)  
 				       System.out.println();
 					long num1;
-				System.out.print("\n Insira o n∫ Octal: ");
+				System.out.print("\n Insira o n¬∫ Octal: ");
 					num1 = dados.nextInt();
 					int decimal1 = cotd(num1);
-		        System.out.println(" O n∫ Decimal correspondente È: " + decimal1 + "\n");
+		        System.out.println(" O n¬∫ Decimal correspondente √©: " + decimal1 + "\n");
 				
 			break;
 			case 3:
 				for (int i = 0; i < 100; ++i)  
 				       System.out.println();
 					String num2;
-				System.out.print("\n Insira o n∫ Hexadecimal: ");
+				System.out.print("\n Insira o n¬∫ Hexadecimal: ");
 					num2 = dados.next();
 					int decimal2 = chtd(num2);
-				System.out.println(" O n∫ Decimal correspondente È: " + decimal2 + "\n");
+				System.out.println(" O n¬∫ Decimal correspondente √©: " + decimal2 + "\n");
 			break;
 			case 4:
 				for (int i = 0; i < 100; ++i)  
 				       System.out.println();
 					long num3;
-				System.out.print("\n Insira o n∫ Decimal: ");
+				System.out.print("\n Insira o n¬∫ Decimal: ");
 					num3 = dados.nextInt();
 					String binary = cdtb(num3);
-				System.out.println(" O n∫ Bin·rio correspondente È: " + binary + "\n");
+				System.out.println(" O n¬∫ Bin√°rio correspondente √©: " + binary + "\n");
 			break;
 			case 5:
 				for (int i = 0; i < 100; ++i)  
 				       System.out.println();
 					long num4;
-				System.out.print("\n Insira o n∫ Decimal: ");
+				System.out.print("\n Insira o n¬∫ Decimal: ");
 					num4 = dados.nextInt();
 					String decimal4=Integer.toOctalString((int) num4);
-				System.out.println(" O n∫ Octal correspondente È: " + decimal4 + "\n");
+				System.out.println(" O n¬∫ Octal correspondente √©: " + decimal4 + "\n");
 			break;
 			case 6:
 				for (int i = 0; i < 100; ++i)  
 				       System.out.println();
 					long num5;
-				System.out.print("\n Insira o n∫ Decimal: ");
+				System.out.print("\n Insira o n¬∫ Decimal: ");
 					num5 = dados.nextInt();
 					String hex = Integer.toHexString((int) num5);
-				System.out.println(" O n∫ Hexadecimal correspondente È: " + hex + "\n");
+				System.out.println(" O n¬∫ Hexadecimal correspondente √©: " + hex + "\n");
 			break;
 			case 0:
 				for (int i = 0; i < 100; ++i)  
@@ -88,7 +88,7 @@ public class csn {
 		} while (menu!=7);
     }
 
-    public static int cbtd(long num) // Inicio funÁ„o binario para decimal
+    public static int cbtd(long num) // Inicio fun√ß√£o binario para decimal
     {
         int decimalNumber = 0, i = 0;
         long remainder;
@@ -100,9 +100,9 @@ public class csn {
             ++i;
         }
         return decimalNumber;
-    } // Fim funÁ„o binario para decimal
+    } // Fim fun√ß√£o binario para decimal
     
-    public static int cotd(long num1) // Inicio funÁ„o octal para decimal
+    public static int cotd(long num1) // Inicio fun√ß√£o octal para decimal
     {    
         int decimal1 = 0;    
         int n = 0;    
@@ -117,9 +117,9 @@ public class csn {
            }    
         }    
         return decimal1;    
-    } // Fim funÁ„o octal para decimal
+    } // Fim fun√ß√£o octal para decimal
     
-    public static int chtd(String num2) // Inicio funÁ„o hexa para decimal
+    public static int chtd(String num2) // Inicio fun√ß√£o hexa para decimal
     { 
         String digits = "0123456789ABCDEF";
         num2 = num2.toUpperCase();
@@ -131,9 +131,9 @@ public class csn {
             decimal2 = 16*decimal2 + d;
         }
         return decimal2;
-    }// Fim funÁ„o hexa para decimal
+    }// Fim fun√ß√£o hexa para decimal
     
-    public static String cdtb(long num3) // Inicio funÁ„o decimal para binario
+    public static String cdtb(long num3) // Inicio fun√ß√£o decimal para binario
     {
         if (num3 == 0) {
             return "0";
@@ -145,6 +145,6 @@ public class csn {
             num3 = num3 / 2;
         }
         return binary;
-    } //Fim funÁ„o decimal pra binario
+    } //Fim fun√ß√£o decimal pra binario
  
 }
